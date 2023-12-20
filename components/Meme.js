@@ -29,6 +29,10 @@ export default function Meme() {
             [name]: value
         }))
     }
+
+    fetch("https://swapi.dev/api/people/1")
+    .then(res => res.json())
+    .then(data => setStarWarsData(data))
     
     return (
         <main>
